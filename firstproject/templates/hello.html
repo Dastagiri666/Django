@@ -1,0 +1,15 @@
+<form method="POST">
+    {% csrf_token %}
+    <label for="name"> name:</label>
+    <input type="text" name="name"><br><br>
+    <label for="domain"> domain:</label>
+    <input type="text" name="domain"><br><br>
+    <label for="company"> company:</label>
+    <input type="text" name="company"><br><br>
+    <input type = "submit" value = "submit">
+  </form>
+  {% for i in data%}
+    <p>name -{{i.name}}</p>
+    <p>domain -{{i.domain}}</p>
+    <p>company -{{i.company}}</p>
+    {% endfor %}
